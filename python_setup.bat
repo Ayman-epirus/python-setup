@@ -126,7 +126,7 @@ goto :init
             echo STATUS  : found a requirements.txt file, installing dependencies ...
             pip install -r requirements.txt
         ) 
-        else (
+        if not exist requirements.txt (
             echo STATUS  : requirements.txt not found, skipping this step
         )
 
